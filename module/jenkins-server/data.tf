@@ -19,31 +19,31 @@ data "aws_security_group" "sg" {
   }
 }
 
-# data "aws_ami" "jenkins_master_ami" {
+# data "aws_ami" "jenkins-server" {
 #   most_recent = true
 
 #   filter {
 #     name   = "name"
-#     values = ["s7-s8-jenkins-master"]
+#     values = ["handson-carles-project"]
 #   }
 # }
-data "aws_ami" "latest_ubuntu" {
-  most_recent = true
+# data "aws_ami" "latest_ubuntu" {
+#   most_recent = true
 
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
-  }
+#   filter {
+#     name   = "name"
+#     values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
+#   }
 
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
+#   filter {
+#     name   = "virtualization-type"
+#     values = ["hvm"]
+#   }
 
-  filter {
-    name   = "architecture"
-    values = ["x86_64"]
-  }
+#   filter {
+#     name   = "architecture"
+#     values = ["x86_64"]
+#   }
 
-  owners = ["099720109477"] # Canonical's AWS account ID
-}
+#   owners = ["099720109477"] # Canonical's AWS account ID
+# }
